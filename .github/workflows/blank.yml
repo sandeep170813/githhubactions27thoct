@@ -1,5 +1,5 @@
 name: myfirstworkflow
-on: workflow_disptach
+on: workflow_dispatch
 jobs:
  build:
   steps:
