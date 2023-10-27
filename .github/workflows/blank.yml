@@ -1,35 +1,13 @@
-name: myfirstworkflow
+name: myvariable workflow
 on: workflow_dispatch
+env: 
+ day_of_week: monday
 jobs:
- build:
+ greeting_job:
   runs-on: ubuntu-latest
+  env:
+   month: october
   steps:
-   - name: weclome command
-     run: echo " welcome"
-   - name: checkout my files
-     uses: actions/checkout@v4
-   - name: list all the files checkout 
-     run: ls -lart 
-   - name: create a directory
-     run: mkdir -p  path/to/artifact/ 
-   - name: copy the files in artifact folder
-     run: cp -r *.* path/to/artifact/ 
-   - name: upload the artifact  
-     uses: actions/upload-artifact@v3
-     with:
-        name: my-artifact
-        path: path/to/artifact/        
-
- deploy:
-  needs: build
-  runs-on: ubuntu-latest
-  steps:
-   - name: deployment job 
-     run: echo " deployment job"    
-   - name: downlaod the artifact 
-     uses: actions/download-artifact@v3
-     with:
-        name: my-artifact
-        path: path/to/artifact/
-   - name: list all the downloaded files 
-     run: ls -lart     
+   - name: print some statement for me for env testing 
+     run: echo "my week is  $day_of_week and month is $month"
+     
