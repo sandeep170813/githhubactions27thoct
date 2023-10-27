@@ -14,5 +14,5 @@ jobs:
       day_of_week: friday
    - name: fetcht the context of workflow 
      env:
-        GITHUB_CONTEXT: ${{ toJson(github) }}
+        Job_CONTEXT: ${{ toJson(job) }}
      run: echo "$GITHUB_CONTEXT"  
