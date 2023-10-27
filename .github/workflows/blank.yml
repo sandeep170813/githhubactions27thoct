@@ -8,6 +8,8 @@ jobs:
      run: echo " welcome"
    - name: checkout my files
      uses: actions/checkout@v4
+   - name: list all the files checkout 
+     run: ls -lart  
  deploy:
   needs: build
   runs-on: ubuntu-latest
