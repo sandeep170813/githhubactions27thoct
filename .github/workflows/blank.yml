@@ -18,10 +18,18 @@ jobs:
      uses: actions/upload-artifact@v3
      with:
         name: my-artifact
-        path: path/to/artifact/   
+        path: path/to/artifact/        
+
  deploy:
   needs: build
   runs-on: ubuntu-latest
   steps:
    - name: deployment job 
      run: echo " deployment job"    
+   - name: downlaod the artifact 
+     uses: actions/download-artifact@v3
+     with:
+        name: my-artifact
+        path: path/to/artifact/
+   - name: list all the downloaded files 
+     run: la -lart     
