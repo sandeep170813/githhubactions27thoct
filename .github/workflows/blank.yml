@@ -1,1 +1,14 @@
-
+name: myfirstworkflow
+on: workflow_disptach
+jobs:
+ build:
+  steps:
+   - name: weclome command
+     run: echo " welcome"
+   - name: checkout my files
+     uses: actions/checkout@v4
+ deploy:
+  needs: build
+  steps:
+   - name: deployment job 
+     run: echo " deployment job"    
