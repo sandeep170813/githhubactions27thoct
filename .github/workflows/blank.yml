@@ -10,4 +10,5 @@ jobs:
   steps:
    - name: print some statement for me for env testing 
      run: echo "my week is  $day_of_week and month is $month"
-     
+     env: 
+      day_of_week: friday
