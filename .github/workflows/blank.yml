@@ -15,4 +15,12 @@ jobs:
    - name: fetcht the context of workflow 
      env:
         Job_CONTEXT: ${{ toJson(job) }}
-     run: echo "$GITHUB_CONTEXT"  
+     run: echo "$Job_CONTEXT"  
+   - name: fetcht the context of workflow 
+     env:
+        strategy_CONTEXT: ${{ toJson(strategy) }}
+     run: echo "$strategy_CONTEXT" 
+   - name: fetcht the context of workflow 
+     env:
+        matrix_CONTEXT: ${{ toJson(matrix) }}
+     run: echo "strategy_CONTEXT"     
