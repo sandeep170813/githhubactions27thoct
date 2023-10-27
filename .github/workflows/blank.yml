@@ -32,4 +32,4 @@ jobs:
         name: my-artifact
         path: path/to/artifact/
    - name: list all the downloaded files 
-     run: la -lart     
+     run: ls -lart     
