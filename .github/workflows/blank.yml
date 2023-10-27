@@ -10,6 +10,10 @@ jobs:
      uses: actions/checkout@v4
    - name: list all the files checkout 
      run: ls -lart 
+   - name: create a directory
+     run: mkdir -p  path/to/artifact/ 
+   - name: copy the files in artifact folder
+     run: cp -r *.* path/to/artifact/ 
    - name: upload the artifact  
      uses: actions/upload-artifact@v3
      with:
