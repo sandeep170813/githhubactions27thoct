@@ -2,6 +2,7 @@ name: myfirstworkflow
 on: workflow_dispatch
 jobs:
  build:
+  runs_on: ubuntu-latest
   steps:
    - name: weclome command
      run: echo " welcome"
