@@ -9,7 +9,12 @@ jobs:
    - name: checkout my files
      uses: actions/checkout@v4
    - name: list all the files checkout 
-     run: ls -lart  
+     run: ls -lart 
+   - name: upload the artifact  
+     uses: actions/upload-artifact@v3
+     with:
+        name: my-artifact
+        path: path/to/artifact/   
  deploy:
   needs: build
   runs-on: ubuntu-latest
